@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 'Bright-Blue': 'hsl(220, 98%, 61%)',
+'Very-Dark-Blue': 'hsl(235, 21%, 11%)',
+'Very-Dark-Desaturated-Blue': 'hsl(235, 24%, 19%)',
+'Light-Grayish-Blue': 'hsl(234, 39%, 85%)',
+'Light-Grayish-Blue-hover' : 'hsl(236, 33%, 92%)',
+'Dark-Grayish-Blue': 'hsl(234, 11%, 52%)',
+'Very-Dark-Grayish-Blue': 'hsl(233, 14%, 35%)',
+'Very-Dark-Grayish-Blue-2': 'hsl(237, 14%, 26%)',
+// Light mode
+'Very-Light-Gray': 'hsl(0, 0%, 98%)',
+'Very-Light-Grayish-Blue': 'hsl(236, 33%, 92%)',
+'Light-Grayish-Blue-L': 'hsl(233, 11%, 84%)',
+'Dark-Grayish-Blue-L': 'hsl(236, 9%, 61%)',
+'Very-Dark-Grayish-Blue-L': 'hsl(235, 19%, 35%)', */
+
+@layer components {
+    
+    .list-item-radio{
+        @apply dark:hover:border-violet-500 hover:border-violet-500  dark:border-Very-Light-Grayish-Blue;
+    }
+
+}
+
+::-webkit-scrollbar{
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: hsla(235, 24%, 19%, 0);
+}
+::-webkit-scrollbar-thumb{
+    background-color: hsl(234, 11%, 52%);
+    border-radius: .5rem;
+
+}
+::-webkit-scrollbar{
+
+}
+
+.chk-btn-color{
+    background: linear-gradient(to bottom right,hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+    border: 0;
+}
+.todo-done{
+    text-decoration: line-through;
+}
+.invis{
+    pointer-events: none;
+}
+.hide-item{
+    display: none;
+    transition-duration: 1000ms;
+}
+
+

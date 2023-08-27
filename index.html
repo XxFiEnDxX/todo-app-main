@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <title>Todo app</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body
+  class="duration-300 bg-desktop-dark dark:bg-desktop-light bg-no-repeat bg-Very-Dark-Blue dark:bg-Very-Light-Grayish-Blue bg-[length:100%_35%] text-Light-Grayish-Blue font-Josefin min-h-screen flex flex-col items-center">
+  <!-- hidden element -->
+  <div class="hidden py-3 border-b-2 dark:hover:border-violet-500 hover:border-violet-500  dark:border-Very-Light-Grayish-Blue bg-Very-Dark-Desaturated-Blue dark:bg-Very-Light-Gray  text-Light-Grayish-Blue  dark:text-Very-Dark-Blue "></div>
+  <!-- hidden element -->
+  <div class="flex flex-col w-[460px] mt-7">
+                                            <!-- LOGO -->
+    <div class="flex flex-row justify-between items-center my-8">
+      <h1 class="text-Light-Grayish-Blue-hover dark:text-Very-Light-Gray text-4xl uppercase tracking-[10px] font-extrabold">Todo</h1>
+      <img class="duration-700 w-[20px] h-[20px] cursor-pointer theme-toggle" src="./images/icon-sun.svg" alt="">
+    </div>
+                                        <!-- add new task -->
+    <div class="duration-150 flex flex-row items-end bg-Very-Dark-Desaturated-Blue dark:bg-Very-Light-Gray py-3 px-4 rounded-md">
+
+      <div
+        class="duration-150 w-[19px] h-[19px] border-2 rounded-full border-solid border-Very-Dark-Grayish-Blue  dark:border-Light-Grayish-Blue-L grid place-items-center ">
+      </div>
+
+      <input
+        class="duration-150 bg-Very-Dark-Desaturated-Blue dark:bg-Very-Light-Gray focus:text-Light-Grayish-Blue dark:focus:text-Very-Dark-Blue text-Dark-Grayish-Blue text-justify align-baseline outline-none w-[100%] px-4 text-sm temp text-ellipsis whitespace-nowrap"
+        placeholder="Create a new todo..." type="text">
+
+    </div>
+    <!-- Task List -->
+    <div
+      class="duration-150 flex flex-col justify-between bg-Very-Dark-Desaturated-Blue dark:bg-Very-Light-Gray min-h-[256px] max-h-[256px] overflow-hidden mt-4 rounded-md">
+      <div class="list min-h-[132px] max-h-[352px] overflow-auto"></div>
+      <div class="w-[100%] flex flex-row justify-between items-center self-end px-3 py-2 text-Dark-Grayish-Blue">
+        <div class="w-[62px] text-[11px]"><span class="cnt">0</span> tasks left</div>
+        <div class="flex flex-row font-extrabold text-[12px] w-[150px] justify-between">
+          <div
+            class="text-Light-Grayish-Blue-hover dark:text-Very-Dark-Grayish-Blue cursor-pointer all-btn">All</div>
+          <div class="hover:text-Light-Grayish-Blue-hover dark:hover:text-Very-Dark-Grayish-Blue cursor-pointer active-btn">Active</div>
+          <div class="hover:text-Light-Grayish-Blue-hover dark:hover:text-Very-Dark-Grayish-Blue cursor-pointer complete-btn">Completed</div>
+        </div>
+        <div class="text-[11px] hover:text-Light-Grayish-Blue-hover dark:hover:text-Very-Dark-Grayish-Blue cursor-pointer clear-btn">
+          Clear Completed
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="text-[11px] pt-10 text-Dark-Grayish-Blue">
+    Drag and drop to reorder list
+  </div> -->
+  <script src="./main.js"></script>
+</body>
+
+</html>

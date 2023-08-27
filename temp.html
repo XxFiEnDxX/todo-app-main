@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        .parent{
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .green{
+            background-color: aquamarine;
+        }
+        .blue{
+            background-color: skyblue;
+        }
+        .introvert{
+            /* visibility: ; */
+            /* opacity: 0; */
+            pointer-events: none;
+        }
+    </style>
+<body>
+    <div class="parent green">
+        <img class="introvert" src="./images/icon-sun.svg" alt="">
+    </div>
+    <script>
+        const body = document.querySelector("body")
+
+        body.addEventListener('click',(e)=>{
+            console.log(e.target.tagName);
+            if(e.target.tagName == 'DIV'){
+                e.target.classList.toggle('green')
+                e.target.classList.toggle('blue')
+            }
+        })
+    </script>
+</body>
+</html>
