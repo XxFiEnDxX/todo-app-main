@@ -56,5 +56,8 @@
     display: none;
     transition-duration: 1000ms;
 }
+.active-color{
+    color: hsl(220, 98%, 61%);
+}
 
 

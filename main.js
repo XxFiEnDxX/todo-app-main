@@ -18,9 +18,9 @@ newTask.addEventListener("keypress", (e) => {
     list.innerHTML += `
     <div class="chk-box duration-150 flex flex-row items-end border-b-[1px] bg-Very-Dark-Desaturated-Blue dark:bg-Very-Light-Gray py-3 px-4 border-Very-Dark-Grayish-Blue-2 dark:border-Very-Light-Grayish-Blue" id="active-status">
 
-    <div class="duration-150 invis w-[19px] h-[19px] cursor-pointer border-2 rounded-full border-solid border-Very-Dark-Grayish-Blue  dark:hover:border-violet-500 hover:border-violet-500 dark:border-Light-Grayish-Blue-L grid place-items-center"></div>
+    <div class="duration-150 invis w-[19px] h-[19px] max-small:w-[19px] max-small:h-[19px] cursor-pointer border-2 rounded-full border-solid border-Very-Dark-Grayish-Blue  dark:hover:border-violet-500 hover:border-violet-500 dark:border-Light-Grayish-Blue-L grid place-items-center"></div>
       
-      <p class="invis duration-150 leading-3 bg-Very-Dark-Desaturated-Blue dark:bg-Very-Light-Gray  text-Light-Grayish-Blue  dark:text-Very-Dark-Blue text-justify align-baseline outline-none w-[100%] px-4 text-sm">${newTask.value}</p>
+      <p class="invis duration-150 leading-3 bg-Very-Dark-Desaturated-Blue dark:bg-Very-Light-Gray  text-Light-Grayish-Blue  dark:text-Very-Dark-Desaturated-Blue text-justify align-baseline outline-none w-[100%] px-4 text-sm">${newTask.value}</p>
       
       <img class="cursor-pointer" src="./images/icon-cross.svg" alt="">
       
@@ -80,12 +80,25 @@ let list_status = "default"
 
 function defaultFun() {
   list_status = "default"
+  all_btn.classList.add("text-Bright-Blue")
+  active_btn.classList.remove("active-color")
+  complete_btn.classList.remove("active-color")
   for (let i = 0; i < list.children.length; i++) {
     list.children[i].classList.remove("hide-item")
   }
 }
 function hideFunc(status,class_status) {
   list_status = status
+  if(status == "active"){
+    all_btn.classList.remove("text-Bright-Blue")
+    active_btn.classList.add("active-color")
+    complete_btn.classList.remove("active-color")
+  }
+  else{
+    complete_btn.classList.add("active-color")
+    active_btn.classList.remove("active-color")
+    all_btn.classList.remove("text-Bright-Blue")
+  }
   for (let i = 0; i < list.children.length; i++) {
     let ele = list.children[i]
     ele.id == class_status?ele.classList.add("hide-item"):ele.classList.remove("hide-item")
